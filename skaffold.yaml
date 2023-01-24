@@ -1,0 +1,463 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+manifests:
+  rawYaml:
+  - ./infra/k8s/*.yaml
+deploy:
+  kubectl: {}
+  kubeContext: docker-desktop
+build:
+  local:
+    push: false
+  artifacts:
+    - image: blah/service-1
+      context: service-1
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-2
+      context: service-2
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-3
+      context: service-3
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-4
+      context: service-4
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-5
+      context: service-5
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-6
+      context: service-6
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-7
+      context: service-7
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-8
+      context: service-8
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-9
+      context: service-9
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-10
+      context: service-10
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-11
+      context: service-11
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-12
+      context: service-12
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-13
+      context: service-13
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-14
+      context: service-14
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-15
+      context: service-15
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-16
+      context: service-16
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-17
+      context: service-17
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-18
+      context: service-18
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-19
+      context: service-19
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-20
+      context: service-20
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-21
+      context: service-21
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-22
+      context: service-22
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-23
+      context: service-23
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-24
+      context: service-24
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+    - image: blah/service-25
+      context: service-25
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
+          - src: '**/*.tsx'
+            dest: .
+          - src: '**/*.css'
+            dest: .
+          - src: '**/*.js'
+            dest: .
+          - src: '**/*.svg'
+            dest: .
+          - src: '**/*.scss'
+            dest: .
+

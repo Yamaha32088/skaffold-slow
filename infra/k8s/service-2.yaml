@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-2-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-2
+  template:
+    metadata:
+      labels:
+        app: service-2
+    spec:
+      containers:
+        - name: service-2
+          image: blah/service-2
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-2-srv
+spec:
+  selector:
+    app: service-2
+  ports:
+    - name: service-2
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
